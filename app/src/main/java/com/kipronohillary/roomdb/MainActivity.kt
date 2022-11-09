@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        appDb=AppDatabase.getDatabase(this)
         binding.btnWriteData.setOnClickListener {
             writeData()
         }
