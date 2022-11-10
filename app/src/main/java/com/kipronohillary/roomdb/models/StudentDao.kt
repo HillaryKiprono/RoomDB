@@ -20,4 +20,6 @@ interface StudentDao {
 
     @Query("DELETE FROM student_table")
      fun deleteAll()
+     @Query("UPDATE student_table SET first_name=:firstName,last_name=:lastName WHERE  roll_no LIKE :roll")
+     fun update(firstName:String,lastName:String,roll:Int)
 }
